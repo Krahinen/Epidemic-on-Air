@@ -353,7 +353,7 @@ if __name__ == "__main__":
         ax.set_ylabel('Fraction of times infecting')
         ax.set_ylim(min(weights)-0.001, max(weights)+0.001)
         xlim = ax.get_xlim()
-        if xlim[0] < 0:
+        if xlim[0] < 0: 
                 xlim =(-xlim[1] / 30, xlim[1])
         ax.set_xlim(xlim)
         print(measureTitles[i] + ":" + str(scipy.stats.spearmanr(weights, edgeData[i])[0]))
